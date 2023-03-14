@@ -48,3 +48,20 @@ exports.getIncomes = async (req, res) => {
     });
   }
 };
+
+exports.deleteIncome = async (req, res) => {
+  const { id } = req.params;
+  IncomeSchema.findByIdAndDelete(id)
+    .then((income) => {
+      res.status(200).json({
+        success: true,
+        message: "Ingreso eliminado correctamente",
+      });
+    })
+    .catch((error) => {
+      res.status(500).json({
+        success: false,
+        message: "Internal server error",
+      });
+    });
+};
