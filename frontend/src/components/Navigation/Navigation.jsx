@@ -1,44 +1,27 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-<<<<<<< HEAD
 import avatar from "../../img/avatar.png";
 import { signout } from "../../utils/Icons";
 import { menuItems } from "../../utils/menuItems";
 
 const Navigation = ({ active, setActive }) => {
-=======
-import avatar from "../../img/avatar.png ";
-import { signout } from "../../utils/Icons";
-import { menuItems } from "../../utils/menuItems";
-
-const Navigation = () => {
->>>>>>> a6980c13e8e43604f75c7b84d0f3a3a3fdf487b1
   return (
     <NavStyled>
       <div className="user-con">
         <img src={avatar} alt="" />
         <div className="text">
-<<<<<<< HEAD
-          <h2>Mike</h2>
-          <p>Your Money</p>
-=======
           <h2>VinKE</h2>
-          <p>Tu Dinero</p>
->>>>>>> a6980c13e8e43604f75c7b84d0f3a3a3fdf487b1
+          <p>Tu Dinero a Salvo</p>
         </div>
       </div>
       <ul className="menu-items">
         {menuItems.map((item) => {
           return (
-<<<<<<< HEAD
             <li
               key={item.id}
               onClick={() => setActive(item.id)}
               className={active === item.id ? "active" : ""}
             >
-=======
-            <li key={item.id}>
->>>>>>> a6980c13e8e43604f75c7b84d0f3a3a3fdf487b1
               {item.icon}
               <span>{item.title}</span>
             </li>
